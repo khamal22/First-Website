@@ -259,8 +259,6 @@ Update the list to display your own interests!
 
 **You can copy the link in the webview panel and paste it in another tab**
 
-<img src="img/cloud9-preview-html-file.png" style="max-height: 350px">
-
 ### TODO 7 : Add an Image and List 
 
 * Inside of the `<div class="sidebar">` tag, add an `<img>` tag. More on image tags [here](http://www.w3schools.com/tags/tag_img.asp).
