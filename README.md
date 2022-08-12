@@ -492,15 +492,17 @@ We need to do some cleanup before putting your site onto the internet. This step
 
 Let's put our site on the Internet so that anyone can look at it!
 
-We are going to use <a href="https://ipfs.io/" target="_blank">IPFS</a>, to host our `index.html` file to get your webpage live on the internet. Although our webpage will be live on the internet, 
-any new changes made to your site after you publish it on IPFS will not be displayed. You would need to republish your webpage to IPFS and it will be assigned a new link (url).  
+We are going to use <a href="https://ipfs.io/" target="_blank">IPFS</a>, to host our `index.html` file to get your webpage live on the internet. Before we go live, we need to create a `.env` file within our Stackblitz workspace. After creating the file, paste this into it:
 
-To do so, you'll need to enter the following git commands into your bash terminal.
+export IPFS_DEPLOY_PINATA__API_KEY=<api key here>
+export IPFS_DEPLOY_PINATA__SECRET_API_KEY=<secret key here>
 
-Enter the following commands, and be careful to place your spaces correctly and press `ENTER` after each one. Read the results of each command and check for errors.
+Now we need to set up a <a href="https://pinata.cloud" target="_blank">Pinata</a> account save. Once you create a Pinata account, click on your profile icon at the top right, and click API keys. After that paste your Pinata API key and Secret key into your `.env` file within Stackblitz after the equal signs. (erase the "<" and ">" too). 
+
+Now you can enter the following commands in your terminal, and be careful to place your spaces correctly and press `ENTER` after each one. Read the results of each command and check for errors.
 
 * `npm install ipfs-deploy`
-* `ipd index.html`
+* `ipd -p pinata index.html`
 * Then copy the link given in the terminal, save it here (*here*)
 * Then navigate your newly publish site on IPFS!
 
